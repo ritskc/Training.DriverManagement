@@ -1,0 +1,38 @@
+﻿<div id="manager-vehicle" class="container">
+    
+    <h3 class="page-header">
+        <span data-ng-show="!vm.Vehicle.Id">Add</span>
+        <span data-ng-show="vm.Vehicle.Id">Edit</span>
+        <span>&nbsp;Vehicle</span>
+    </h3>
+
+    <form>
+        <div class="form-group">
+            <label for="description">Description</label> <span>{{vm.Validator.Errors.Description}}</span>
+            <input type="text" class="form-control" id="description" data-ng-model="vm.Vehicle.Description"/>
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <input type="text" class="form-control" id="type" data-ng-model="vm.Vehicle.Type"/>
+        </div>
+        <div class="form-group">
+            <label for="make">Make</label>
+            <input type="text" class="form-control" id="make" data-ng-model="vm.Vehicle.Make"/>
+        </div>
+        <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" class="form-control" id="model" data-ng-model="vm.Vehicle.Model"/>
+        </div>
+        <div class="form-group">
+            <label for="lat">Lat</label> <span>{{vm.Validator.Errors.Lat}}</span>
+            <input type="text" class="form-control" id="lat" data-ng-model="vm.Vehicle.Lat"/>
+        </div>
+        <div class="form-group">
+            <label for="lon">Lon</label> <span>{{vm.Validator.Errors.Lon}}</span>
+            <input type="text" class="form-control" id="lon" data-ng-model="vm.Vehicle.Lon"/>
+        </div>
+
+        <button class="btn btn-success" type="submit" data-ng-click="vm.Save()" data-ng-disabled="!vm.CanSave()">Save</button>
+        <button class="btn btn-danger" data-ng-click="vm.Cancel()">Cancel</button>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Driver Management</title>
+
+    @Styles.Render("~/Bundles/Styles")
+</head>
+<body>
+    <ui-view></ui-view>
+
+    <script type="text/javascript">
+        window.BaseUrl = "@Url.Content("~/")";
+        window.IsDebug = "@ViewBag.IsDebug";
+    </script>
+
+    @Scripts.Render("~/Bundles/Scripts")
+    @RenderBody()
+</body>
+</html>

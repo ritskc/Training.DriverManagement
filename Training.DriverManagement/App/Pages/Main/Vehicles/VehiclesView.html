@@ -1,0 +1,39 @@
+﻿<div id="vehicles" class="container">
+    
+    <top-nav-bar></top-nav-bar>
+    
+    <h3>Vehicles</h3>
+
+    <div>
+        <button class="btn btn-primary" data-ng-click="vm.AddVehicle()">Create Vehicle</button>
+    </div>
+    
+    <br/>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Lat</th>
+            <th>Lon</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="vehicle in vm.Vehicles">
+                <td>{{vehicle.Description}}</td>
+                <td>{{vehicle.Type}}</td>
+                <td>{{vehicle.Make}}</td>
+                <td>{{vehicle.Model}}</td>
+                <td>{{vehicle.Lat}}</td>
+                <td>{{vehicle.Lon}}</td>
+                <td><a href="" data-ng-click="vm.EditVehicle(vehicle)">Edit</a></td>
+                <td><a href="" data-ng-click="vm.DeleteVehicle(vehicle)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

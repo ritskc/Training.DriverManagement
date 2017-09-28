@@ -1,0 +1,30 @@
+﻿<div id="manage-user" class="container">
+    
+    <h3 class="page-header">
+        <span data-ng-show="!vm.User.Id">Add</span>
+        <span data-ng-show="vm.User.Id">Edit</span>
+        <span>&nbsp;User</span>
+    </h3>
+
+    <form>
+        <div class="form-group">
+            <label for="email">Email</label> <span>{{vm.Validator.Errors.Email}}</span>
+            <input type="text" class="form-control" id="email" placeholder="Email" data-ng-model="vm.User.Email" />
+        </div>
+        <div class="form-group">
+            <label for="first-name">First Name</label> <span>{{vm.Validator.Errors.FirstName}}</span>
+            <input type="text" class="form-control" id="first-name" placeholder="First Name" data-ng-model="vm.User.FirstName" />
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name</label> <span>{{vm.Validator.Errors.LastName}}</span>
+            <input type="text" class="form-control" id="last-name" placeholder="Last Name" data-ng-model="vm.User.LastName" />
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label> <span>{{vm.Validator.Errors.Phone}}</span>
+            <input type="text" class="form-control" id="phone" placeholder="Phone" data-ng-model="vm.User.PhoneNo" />
+        </div>
+        
+        <button type="submit" class="btn btn-success" data-ng-click="vm.Save()" data-ng-disabled="!vm.CanSave()">Save</button>
+        <button class="btn btn-danger" data-ng-click="vm.Cancel()">Cancel</button>
+    </form>
+</div>

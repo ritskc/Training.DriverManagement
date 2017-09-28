@@ -1,0 +1,16 @@
+﻿<div id="assign-fleet" class="container">
+
+    <h3>Assign Fleet</h3>
+    
+    <p>List of Vehicles</p>
+
+    <div>
+        <button class="btn btn-success" data-ng-click="vm.Save()">Save</button>
+        <button class="btn btn-danger" data-ng-click="vm.Cancel()">Cancel</button>
+    </div>
+
+    <ul>
+        <li data-ng-repeat="vehicle in Vehicles">{{vehicle.vehicleName}}</li>
+    </ul>
+
+</div>

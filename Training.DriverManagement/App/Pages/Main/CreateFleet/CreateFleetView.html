@@ -1,0 +1,19 @@
+﻿<div id="create-fleet" class="container">
+
+    <h3>Create Fleet</h3>
+
+    <form>
+        <div class="form-group">
+            <label for="fleet-name">Fleet Name</label> <span>{{vm.Validator.Errors.FleetName}}</span>
+            <input type="text" class="form-control" id="fleet-name" placeholder="Fleet Name" data-ng-model="vm.Fleet.FleetName" />
+        </div>
+        <div class="form-group">
+            <label for="fleet-description">Description</label> <span>{{vm.Validator.Errors.FleetDescription}}</span>
+            <input type="text" class="form-control" id="fleet-description" placeholder="Description" data-ng-model="vm.Fleet.FleetDescription" />
+        </div>        
+
+        <button type="submit" class="btn btn-success" data-ng-click="vm.Save()" data-ng-disabled="!vm.CanSave()">Save</button>
+        <button class="btn btn-danger" data-ng-click="vm.Cancel()">Cancel</button>        
+    </form>
+
+</div>

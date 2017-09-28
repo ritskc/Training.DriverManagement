@@ -1,0 +1,23 @@
+﻿<div id="create-fleet" class="container">
+
+    <h3 class="page-header">
+        <span data-ng-show="!vm.Fleet.Id">Add</span>
+        <span data-ng-show="vm.Fleet.Id">Edit</span>
+        <span>&nbsp;Fleet</span>
+    </h3>
+
+    <form>
+        <div class="form-group">
+            <label for="fleet-name">Fleet Name</label> <span>{{vm.Validator.Errors.Name}}</span>
+            <input type="text" class="form-control" id="fleet-name" placeholder="Fleet Name" data-ng-model="vm.Fleet.Name" />
+        </div>
+        <div class="form-group">
+            <label for="fleet-description">Description</label> <span>{{vm.Validator.Errors.Description}}</span>
+            <input type="text" class="form-control" id="fleet-description" placeholder="Description" data-ng-model="vm.Fleet.Description" />
+        </div>        
+
+        <button type="submit" class="btn btn-success" data-ng-click="vm.Save()" data-ng-disabled="!vm.CanSave()">Save</button>
+        <button class="btn btn-danger" data-ng-click="vm.Cancel()">Cancel</button>        
+    </form>
+
+</div>

@@ -1,0 +1,23 @@
+﻿<div id="vehicle-fleet">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <h2>Unassinged</h2>
+            <ul data-ng-repeat="fleet in vm.UnassignedFleets">
+                <li>{{fleet.FleetDescription}} <a href="javascript:void(0)" data-ng-click="vm.AddFleet(fleet)">Add</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <h2>Assigned</h2>
+            <ul data-ng-repeat="fleet in vm.AssignedFleets">
+                <li>{{fleet.FleetDescription}} <a href="javascript:void(0)" data-ng-click="vm.RemoveFleet(fleet)">Remove</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-danger" data-ng-click="vm.Cancel()">Cancel</button>
+            <button class="btn btn-success" type="submit" data-ng-click="vm.Save()">Save</button>
+        </div>
+    </div>
+</div>

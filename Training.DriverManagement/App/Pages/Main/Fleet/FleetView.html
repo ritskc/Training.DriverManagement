@@ -1,0 +1,26 @@
+﻿<div id="fleet" class="container">
+
+    <h3>Fleet</h3>
+
+    <div>
+        <button class="btn btn-primary" data-ng-click="vm.AddFleet()">Create Fleet</button>
+    </div>
+
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>Fleet Name</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr data-ng-repeat="fleet in vm.Fleet">
+            <td>{{fleet.FleetName}}</td>
+            <td>{{fleet.FleetDescription}}</td>
+            <td><a href="" data-ng-click="vm.EditFleet(fleet)">Edit</a></td>
+            <td><a href="" data-ng-click="vm.DeleteFleet(fleet)">Delete</a></td>
+            <td><a href="" data-ng-click="vm.AssignVehicles(fleet)">Assign Vehicles</a></td>
+        </tr>
+    </table>
+
+</div>

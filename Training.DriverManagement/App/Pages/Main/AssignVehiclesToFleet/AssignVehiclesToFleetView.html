@@ -1,0 +1,27 @@
+﻿<div id="assign-fleet" class="container">
+
+    <h3 class="page-header">Assign Vehicles to {{vm.Fleet.Name}}</h3>    
+    
+    <div class="row">
+        <div class="col-xs-6">
+            <ul class="list-group">
+                <li data-ng-repeat="vehicle in vm.AssignedVehicles" class="list-group-item">
+                    <span>{{vehicle.Description}}</span> <a href="" data-ng-click="vm.UnassignVehicle(vehicle)">Unassign</a>
+                </li> 
+            </ul>
+        </div>
+        <div class="col-xs-6">
+            <ul class="list-group">
+                <li data-ng-repeat="vehicle in vm.UnassignedVehicles" class="list-group-item">
+                    <span>{{vehicle.Description}}</span> <a href="" data-ng-click="vm.AssignVehicle(vehicle)">Assign</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <button class="btn btn-success" data-ng-click="vm.Save()">Save</button>
+        <button class="btn btn-danger" data-ng-click="vm.Cancel()">Cancel</button>
+    </div>
+
+</div>

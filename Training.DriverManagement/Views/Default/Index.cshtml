@@ -1,0 +1,18 @@
+﻿@using System.Web.Optimization
+@model dynamic
+
+@{
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@Scripts.Render("~/Bundles/App")
+
+@*Bootstraping application*@
+<script type="text/javascript">
+    angular.element(document).ready(function()
+    {
+        var appName = "DriverManagement";
+        var app = new DriverManagement.AppModule(appName);
+        angular.bootstrap(document, [appName]);
+    });
+</script>
